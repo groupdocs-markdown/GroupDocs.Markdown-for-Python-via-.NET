@@ -92,3 +92,5 @@ Examples/**/*.txt
 Examples/**/output/
 Examples/**/content/
 Examples/**/images/
+
+!requirements.txt
