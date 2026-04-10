@@ -1,0 +1,168 @@
+<Technologies>
+  <Category name="Model Architectures">
+    <Technology>
+      <Name>Transformer</Name>
+      <Description>Attention-based neural architecture used by most modern LLMs.</Description>
+      <KeyComponents>
+        <Component>Self-Attention</Component>
+        <Component>Feed-Forward Networks</Component>
+        <Component>Positional Encoding</Component>
+      </KeyComponents>
+    </Technology>
+    <Technology>
+      <Name>Mixture of Experts (MoE)</Name>
+      <Description>Scales model capacity by routing tokens to specialized expert networks.</Description>
+      <KeyComponents>
+        <Component>Router</Component>
+        <Component>Experts</Component>
+        <Component>Gating Mechanism</Component>
+      </KeyComponents>
+    </Technology>
+    <Technology>
+      <Name>RNN Derivatives</Name>
+      <Description>Legacy architectures (LSTM/GRU) used before transformers; sometimes combined with attention.</Description>
+      <KeyComponents>
+        <Component>LSTM</Component>
+        <Component>GRU</Component>
+      </KeyComponents>
+    </Technology>
+  </Category>
+
+  <Category name="Training Paradigms">
+    <Technology>
+      <Name>Supervised Pretraining</Name>
+      <Description>Training on large text corpora to predict next tokens.</Description>
+      <KeyComponents>
+        <Component>Causal Language Modeling</Component>
+        <Component>Masked Language Modeling</Component>
+      </KeyComponents>
+    </Technology>
+    <Technology>
+      <Name>Instruction Tuning</Name>
+      <Description>Fine-tuning with curated instruction–response datasets.</Description>
+    </Technology>
+    <Technology>
+      <Name>Reinforcement Learning from Human Feedback (RLHF)</Name>
+      <Description>Alignment technique using reward models and policy optimization.</Description>
+      <KeyComponents>
+        <Component>Preference Data</Component>
+        <Component>Reward Model</Component>
+        <Component>PPO or DPO</Component>
+      </KeyComponents>
+    </Technology>
+    <Technology>
+      <Name>DPO (Direct Preference Optimization)</Name>
+      <Description>Alternative to RLHF that directly optimizes preference loss without RL loops.</Description>
+    </Technology>
+    <Technology>
+      <Name>Continual / Online Learning</Name>
+      <Description>Updates model over time without full retraining.</Description>
+    </Technology>
+  </Category>
+
+  <Category name="Inference and Optimization">
+    <Technology>
+      <Name>Quantization</Name>
+      <Description>Reduces weight precision (e.g., 8-bit, 4-bit) to speed up inference.</Description>
+    </Technology>
+    <Technology>
+      <Name>Pruning</Name>
+      <Description>Removes redundant parameters to reduce model size.</Description>
+    </Technology>
+    <Technology>
+      <Name>Distillation</Name>
+      <Description>Trains smaller models to emulate larger teacher LLMs.</Description>
+    </Technology>
+    <Technology>
+      <Name>Speculative Decoding</Name>
+      <Description>Accelerates generation using draft and verifier models.</Description>
+    </Technology>
+    <Technology>
+      <Name>KV Caching</Name>
+      <Description>Stores attention key/values to avoid recomputation in autoregressive decoding.</Description>
+    </Technology>
+    <Technology>
+      <Name>Batching / Continuous Batching</Name>
+      <Description>Combines multiple requests for higher throughput.</Description>
+    </Technology>
+  </Category>
+
+  <Category name="Retrieval and Context Extension">
+    <Technology>
+      <Name>RAG (Retrieval-Augmented Generation)</Name>
+      <Description>Integrates external document retrieval into LLM responses.</Description>
+      <KeyComponents>
+        <Component>Embedding Model</Component>
+        <Component>Vector Database</Component>
+        <Component>Retriever</Component>
+      </KeyComponents>
+    </Technology>
+    <Technology>
+      <Name>Long-Context Attention Mechanisms</Name>
+      <Description>Techniques like sliding window, recurrence, or ALiBi enabling >100K context tokens.</Description>
+    </Technology>
+    <Technology>
+      <Name>Memory Systems</Name>
+      <Description>Persistent or session memory extending the model’s ability to reference past information.</Description>
+    </Technology>
+  </Category>
+
+  <Category name="Embedding and Search Technologies">
+    <Technology>
+      <Name>Vector Databases</Name>
+      <Description>Stores and retrieves high-dimensional embeddings efficiently.</Description>
+      <Examples>
+        <Example>FAISS</Example>
+        <Example>Milvus</Example>
+        <Example>Pinecone</Example>
+        <Example>Weaviate</Example>
+      </Examples>
+    </Technology>
+    <Technology>
+      <Name>Embedding Models</Name>
+      <Description>Generate dense vector representations for semantic similarity.</Description>
+    </Technology>
+  </Category>
+
+  <Category name="Agents and Orchestration">
+    <Technology>
+      <Name>Tool Use / Function Calling</Name>
+      <Description>Structured invocation of tools or APIs based on model output.</Description>
+    </Technology>
+    <Technology>
+      <Name>Agent Frameworks</Name>
+      <Description>Systems coordinating LLM tasks with memory, tools, and planning.</Description>
+      <Examples>
+        <Example>LangChain</Example>
+        <Example>LlamaIndex</Example>
+        <Example>OpenAI Agents API</Example>
+      </Examples>
+    </Technology>
+  </Category>
+
+  <Category name="Deployment Infrastructure">
+    <Technology>
+      <Name>Inference Runtimes</Name>
+      <Description>Optimized execution engines for LLMs.</Description>
+      <Examples>
+        <Example>TensorRT-LLM</Example>
+        <Example>ONNX Runtime</Example>
+        <Example>vLLM</Example>
+        <Example>GGML</Example>
+      </Examples>
+    </Technology>
+    <Technology>
+      <Name>Containerization</Name>
+      <Description>Packaging and distribution using Docker, OCI images, and orchestration platforms.</Description>
+    </Technology>
+    <Technology>
+      <Name>Distributed Training Frameworks</Name>
+      <Description>Scaling LLM training across multiple GPUs/nodes.</Description>
+      <Examples>
+        <Example>DeepSpeed</Example>
+        <Example>Megatron-LM</Example>
+        <Example>PyTorch FSDP</Example>
+      </Examples>
+    </Technology>
+  </Category>
+</Technologies>
