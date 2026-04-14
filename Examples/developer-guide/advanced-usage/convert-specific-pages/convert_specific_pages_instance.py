@@ -10,7 +10,7 @@ def convert_specific_pages_instance():
         options.page_numbers = [1, 3]  # convert only pages 1 and 3
 
         # Step 3: Convert and save the result
-        converter.convert("convert-specific-pages-instance.md", convert_options=options)
+        converter.convert("convert-pages-instance.md", convert_options=options)
 
 if __name__ == "__main__":
     convert_specific_pages_instance()

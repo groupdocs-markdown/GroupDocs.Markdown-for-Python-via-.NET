@@ -8,11 +8,13 @@ def get_info_instance():
         # Step 2: Retrieve document metadata
         info = converter.get_document_info()
 
-        print(f"Format:     {info.file_format}")
-        print(f"Pages:      {info.page_count}")
-        print(f"Title:      {info.title}")
-        print(f"Author:     {info.author}")
-        print(f"Encrypted:  {info.is_encrypted}")
+        # Step 3: Write the metadata fields to a text file
+        with open("get-info-instance.txt", "w", encoding="utf-8") as f:
+            f.write(f"Format:    {info.file_format}\n")
+            f.write(f"Pages:     {info.page_count}\n")
+            f.write(f"Title:     {info.title}\n")
+            f.write(f"Author:    {info.author}\n")
+            f.write(f"Encrypted: {info.is_encrypted}\n")
 
 if __name__ == "__main__":
     get_info_instance()

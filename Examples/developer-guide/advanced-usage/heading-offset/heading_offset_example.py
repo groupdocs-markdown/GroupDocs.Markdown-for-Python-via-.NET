@@ -7,8 +7,8 @@ def heading_offset_example():
     options = ConvertOptions()
     options.heading_level_offset = 2  # shift all headings down two levels
 
-    # Step 2: Convert the document using keyword argument for options
-    md = MarkdownConverter.to_markdown("annual-report.docx", convert_options=options)
+    # Step 2: Convert the document and save it to a Markdown file
+    MarkdownConverter.to_file("annual-report.docx", "heading-offset-example.md", convert_options=options)
 
     # Source: # Title     -> Output: ### Title
     # Source: ## Section  -> Output: #### Section

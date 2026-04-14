@@ -8,7 +8,7 @@ def convert_specific_pages_to_file():
     options.page_numbers = [2, 4, 5]  # convert pages 2, 4, and 5
 
     # Step 2: Convert and save to file using keyword argument for options
-    MarkdownConverter.to_file("business-plan.pdf", "convert-specific-pages.md", convert_options=options)
+    MarkdownConverter.to_file("business-plan.pdf", "convert-pages-to-file.md", convert_options=options)
 
 if __name__ == "__main__":
     convert_specific_pages_to_file()

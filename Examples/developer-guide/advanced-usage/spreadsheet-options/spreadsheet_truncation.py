@@ -8,8 +8,8 @@ def spreadsheet_truncation():
     options.max_columns = 8     # only include the first 8 columns
     options.max_rows = 50       # only include the first 50 data rows per sheet
 
-    # Step 2: Convert with truncation options using keyword argument
-    md = MarkdownConverter.to_markdown("cost-analysis.xlsx", convert_options=options)
+    # Step 2: Convert with truncation options and save to a file
+    MarkdownConverter.to_file("cost-analysis.xlsx", "spreadsheet-truncation.md", convert_options=options)
 
     # Truncated columns/rows show "..." indicators.
     # Warnings are reported in ConvertResult.warnings.

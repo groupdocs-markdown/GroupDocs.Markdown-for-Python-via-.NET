@@ -7,8 +7,8 @@ def flavor_github():
     options = ConvertOptions()
     options.flavor = MarkdownFlavor.GIT_HUB
 
-    # Step 2: Convert the document using keyword argument for options
-    md = MarkdownConverter.to_markdown("business-plan.docx", convert_options=options)
+    # Step 2: Convert the document and save it to a Markdown file
+    MarkdownConverter.to_file("business-plan.docx", "flavor-github.md", convert_options=options)
 
     # Tables are rendered as:
     # | Column A | Column B |

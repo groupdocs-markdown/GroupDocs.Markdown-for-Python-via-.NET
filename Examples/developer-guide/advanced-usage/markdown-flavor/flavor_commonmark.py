@@ -7,8 +7,8 @@ def flavor_commonmark():
     options = ConvertOptions()
     options.flavor = MarkdownFlavor.COMMON_MARK
 
-    # Step 2: Convert the document using keyword argument for options
-    md = MarkdownConverter.to_markdown("business-plan.docx", convert_options=options)
+    # Step 2: Convert the document and save it to a Markdown file
+    MarkdownConverter.to_file("business-plan.docx", "flavor-commonmark.md", convert_options=options)
 
     # Tables are rendered as fenced code blocks since CommonMark
     # has no native table syntax:

@@ -6,7 +6,7 @@ def error_handling_example():
 
     try:
         # Step 1: Attempt to convert the document
-        MarkdownConverter.to_file("annual-report.docx", "error-handling.md")
+        MarkdownConverter.to_file("annual-report.docx", "error-handling-example.md")
     except DocumentProtectedException:
         # Step 2a: Handle password-protected documents
         print("Wrong or missing password.")

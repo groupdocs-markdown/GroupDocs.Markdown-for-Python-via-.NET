@@ -8,7 +8,7 @@ def load_from_stream():
         # Step 2: Create a converter from the stream
         with MarkdownConverter(stream) as converter:
             # Step 3: Convert and save the Markdown output
-            converter.convert("load-from-stream.md")
+            converter.convert("load-stream-basic.md")
 
 if __name__ == "__main__":
     load_from_stream()

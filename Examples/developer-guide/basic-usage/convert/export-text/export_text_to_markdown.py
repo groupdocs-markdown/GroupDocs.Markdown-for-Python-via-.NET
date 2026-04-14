@@ -8,11 +8,8 @@ def export_text_to_markdown():
     if os.path.exists("GroupDocs.Markdown.lic"):
         License.set_("GroupDocs.Markdown.lic")
 
-    # Step 2: Convert XML to a Markdown string in one call
-    markdown = MarkdownConverter.to_markdown("llms-tech.xml")
-
-    # Step 3: Or save the conversion result directly to a file
-    MarkdownConverter.to_file("llms-tech.xml", "export-text.md")
+    # Step 2: Convert the XML/text file directly to Markdown
+    MarkdownConverter.to_file("llms-tech.xml", "export-text-static.md")
 
 if __name__ == "__main__":
     export_text_to_markdown()

@@ -6,12 +6,13 @@ def get_info_static():
     # Step 1: Get document info without performing a full conversion
     info = MarkdownConverter.get_info("business-plan.docx")
 
-    # Step 2: Print the metadata fields
-    print(f"Format:    {info.file_format}")     # Docx
-    print(f"Pages:     {info.page_count}")      # 42
-    print(f"Title:     {info.title}")            # "Q3 Report"
-    print(f"Author:    {info.author}")           # "Jane Doe"
-    print(f"Encrypted: {info.is_encrypted}")     # False
+    # Step 2: Write the metadata fields to a text file
+    with open("get-info-static.txt", "w", encoding="utf-8") as f:
+        f.write(f"Format:    {info.file_format}\n")     # Docx
+        f.write(f"Pages:     {info.page_count}\n")      # 42
+        f.write(f"Title:     {info.title}\n")           # "Q3 Report"
+        f.write(f"Author:    {info.author}\n")          # "Jane Doe"
+        f.write(f"Encrypted: {info.is_encrypted}\n")    # False
 
 if __name__ == "__main__":
     get_info_static()

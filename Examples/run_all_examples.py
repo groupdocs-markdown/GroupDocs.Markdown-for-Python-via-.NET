@@ -76,6 +76,9 @@ examples = [
     "licensing/set_license_stream_static.py",
     "licensing/set_license_stream_instance.py",
     "licensing/set_metered_license.py",
+    "getting-started/how-to-run-examples/convert.py",
+    "developer-guide/basic-usage/convert/_index/convert_static.py",
+    "developer-guide/basic-usage/convert/_index/convert_instance.py",
     "developer-guide/basic-usage/convert/export-pdf/export_pdf_to_markdown.py",
     "developer-guide/basic-usage/convert/export-pdf/export_pdf_with_options.py",
     "developer-guide/basic-usage/convert/export-wordprocessing/export_word_to_markdown.py",
@@ -117,12 +120,17 @@ examples = [
     "developer-guide/advanced-usage/spreadsheet-options/spreadsheet_sheets.py",
     "developer-guide/advanced-usage/error-handling/error_handling_example.py",
     "developer-guide/advanced-usage/error-handling/warnings_example.py",
+    "developer-guide/advanced-usage/async-api/async_static.py",
+    "developer-guide/advanced-usage/async-api/async_instance.py",
+    "developer-guide/advanced-usage/async-api/async_concurrent.py",
+    "developer-guide/advanced-usage/async-api/async_fastapi.py",
     "developer-guide/advanced-usage/uri-rewriting/uri_rewriting_cdn.py",
     "developer-guide/use-cases/convert-for-rag/convert_for_rag.py",
     "developer-guide/use-cases/convert-for-rag/batch_convert_for_rag.py",
     "developer-guide/use-cases/static-site-generator/static_site_convert.py",
     "developer-guide/use-cases/static-site-generator/batch_convert_for_hugo.py",
     "developer-guide/use-cases/batch-convert/batch_convert.py",
+    "product-overview/quick_example.py",
 ]
 
 print_intro()

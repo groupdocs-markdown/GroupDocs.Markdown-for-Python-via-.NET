@@ -9,12 +9,13 @@ def warnings_example():
         options = ConvertOptions()
         options.max_rows = 10  # limit to first 10 data rows per sheet
 
-        # Step 3: Convert using keyword argument for options
-        result = converter.convert("warnings.md", convert_options=options)
+        # Step 3: Convert and capture the result for inspection
+        result = converter.convert("warnings-example.md", convert_options=options)
 
-        # Step 4: Inspect non-fatal warnings (e.g., truncation notices)
-        for warning in result.warnings:
-            print(f"Warning: {warning}")
+        # Step 4: Write any non-fatal warnings to a separate text file
+        with open("warnings-example.txt", "w", encoding="utf-8") as f:
+            for warning in result.warnings:
+                f.write(f"Warning: {warning}\n")
 
 if __name__ == "__main__":
     warnings_example()

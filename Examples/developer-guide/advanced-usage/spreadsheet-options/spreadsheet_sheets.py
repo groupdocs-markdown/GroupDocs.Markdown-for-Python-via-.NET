@@ -10,13 +10,8 @@ def spreadsheet_sheets():
 
     # Step 2: Open the workbook with a context manager
     with MarkdownConverter("cost-analysis.xlsx") as converter:
-        # Step 3: Convert using keyword argument for options
-        result = converter.convert(convert_options=options)
-
-        # Step 4: Check for conversion warnings (e.g., truncation)
-        for warning in result.warnings:
-            print(f"Warning: {warning}")
-        # e.g. "Worksheet 'Data' truncated at 50 rows."
+        # Step 3: Convert and save the Markdown output
+        converter.convert("spreadsheet-sheets.md", convert_options=options)
 
 if __name__ == "__main__":
     spreadsheet_sheets()

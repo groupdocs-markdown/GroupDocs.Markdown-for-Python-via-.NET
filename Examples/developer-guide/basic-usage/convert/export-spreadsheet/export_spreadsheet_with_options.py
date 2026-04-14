@@ -16,10 +16,8 @@ def export_spreadsheet_with_options():
         options.max_rows = 100     # limit to first 100 data rows per sheet
         options.heading_level_offset = 1  # shift headings down one level
 
-        # Step 
-
         # Step 4: Convert and save the Markdown output
-        converter.convert("export-spreadsheet-options.md", convert_options=options)
+        converter.convert("export-spreadsheet-instance.md", convert_options=options)
 
 if __name__ == "__main__":
     export_spreadsheet_with_options()

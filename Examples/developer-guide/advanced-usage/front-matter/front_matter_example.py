@@ -7,11 +7,8 @@ def front_matter_example():
     options = ConvertOptions()
     options.include_front_matter = True
 
-    # Step 2: Convert the document with front matter enabled
-    md = MarkdownConverter.to_markdown("business-plan.docx", convert_options=options)
-
-    # Step 3: Print the result -- YAML front matter appears at the top
-    print(md)
+    # Step 2: Convert the document and save it to a Markdown file
+    MarkdownConverter.to_file("business-plan.docx", "front-matter-example.md", convert_options=options)
     # Output:
     # ---
     # title: "Q3 Report"

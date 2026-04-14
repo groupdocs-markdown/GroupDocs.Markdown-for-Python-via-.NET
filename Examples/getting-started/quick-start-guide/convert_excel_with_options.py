@@ -12,16 +12,8 @@ def convert_excel_with_options():
 
     # Step 2: Open the spreadsheet with a context manager
     with MarkdownConverter("cost-analysis.xlsx") as converter:
-        # Step 3: Inspect document metadata before converting
-        info = converter.get_document_info()
-        print(f"Worksheets: {info.page_count}")
-
-        # Step 4: Convert using keyword argument for options
-        result = converter.convert("convert-excel-options.md", convert_options=options)
-
-        # Step 5: Check for non-fatal conversion warnings
-        for w in result.warnings:
-            print(f"Warning: {w}")
+        # Step 3: Convert and save the Markdown output
+        converter.convert("quick-start-excel.md", convert_options=options)
 
 if __name__ == "__main__":
     convert_excel_with_options()

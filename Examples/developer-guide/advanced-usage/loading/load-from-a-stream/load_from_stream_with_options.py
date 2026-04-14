@@ -11,7 +11,7 @@ def load_from_stream_with_options():
         # Step 3: Create a converter from the stream with load options
         with MarkdownConverter(stream, load_options=load_options) as converter:
             # Step 4: Convert and save the Markdown output
-            converter.convert("load-from-stream-options.md")
+            converter.convert("load-stream-with-options.md")
 
 if __name__ == "__main__":
     import shutil

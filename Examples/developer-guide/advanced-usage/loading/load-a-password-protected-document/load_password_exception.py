@@ -5,10 +5,11 @@ def load_password_exception():
 
     try:
         # Step 1: Attempt to convert without providing a password
-        markdown = MarkdownConverter.to_markdown("protected.docx")
+        MarkdownConverter.to_file("protected.docx", "load-password-exception.md")
     except DocumentProtectedException as ex:
-        # Step 2: Catch the exception and display a user-friendly message
-        print(f"Cannot open document: {ex}")
+        # Step 2: Catch the exception and write a user-friendly message to a file
+        with open("load-password-exception.txt", "w", encoding="utf-8") as f:
+            f.write(f"Cannot open document: {ex}\n")
 
 if __name__ == "__main__":
     load_password_exception()

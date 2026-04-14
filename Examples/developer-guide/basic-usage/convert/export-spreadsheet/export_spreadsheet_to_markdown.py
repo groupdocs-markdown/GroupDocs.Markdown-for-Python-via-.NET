@@ -8,11 +8,8 @@ def export_spreadsheet_to_markdown():
     if os.path.exists("GroupDocs.Markdown.lic"):
         License.set_("GroupDocs.Markdown.lic")
 
-    # Step 2: Convert XLSX to a Markdown string in one call
-    markdown = MarkdownConverter.to_markdown("cost-analysis.xlsx")
-
-    # Step 3: Or save the conversion result directly to a file
-    MarkdownConverter.to_file("cost-analysis.xlsx", "export-spreadsheet.md")
+    # Step 2: Convert the spreadsheet directly to a Markdown file
+    MarkdownConverter.to_file("cost-analysis.xlsx", "export-spreadsheet-static.md")
 
 if __name__ == "__main__":
     export_spreadsheet_to_markdown()

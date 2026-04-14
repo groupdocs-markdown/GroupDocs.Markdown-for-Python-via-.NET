@@ -14,10 +14,8 @@ def export_text_with_options():
         options = ConvertOptions()
         options.heading_level_offset = 1  # shift all headings down one level
 
-        # Step 
-
         # Step 4: Convert and save the Markdown output
-        converter.convert("export-text-options.md", convert_options=options)
+        converter.convert("export-text-instance.md", convert_options=options)
 
 if __name__ == "__main__":
     export_text_with_options()

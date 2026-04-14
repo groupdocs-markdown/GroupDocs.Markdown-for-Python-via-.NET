@@ -8,7 +8,7 @@ def convert_specific_pages_static():
     options.page_numbers = [1, 3]  # convert only pages 1 and 3
 
     # Step 2: Convert selected pages using keyword argument for options
-    MarkdownConverter.to_file("business-plan.docx", "convert-specific-pages-static.md", convert_options=options)
+    MarkdownConverter.to_file("business-plan.docx", "convert-pages-static.md", convert_options=options)
 
 if __name__ == "__main__":
     convert_specific_pages_static()

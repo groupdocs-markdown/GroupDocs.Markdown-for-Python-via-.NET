@@ -8,11 +8,8 @@ def export_pdf_to_markdown():
     if os.path.exists("GroupDocs.Markdown.lic"):
         License.set_("GroupDocs.Markdown.lic")
 
-    # Step 2: Convert PDF to a Markdown string in one call
-    markdown = MarkdownConverter.to_markdown("business-plan.pdf")
-
-    # Step 3: Or save the conversion result directly to a file
-    MarkdownConverter.to_file("business-plan.pdf", "export-pdf.md")
+    # Step 2: Convert the PDF directly to a Markdown file
+    MarkdownConverter.to_file("business-plan.pdf", "export-pdf-static.md")
 
 if __name__ == "__main__":
     export_pdf_to_markdown()

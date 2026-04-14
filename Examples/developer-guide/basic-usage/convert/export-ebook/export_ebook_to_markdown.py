@@ -8,11 +8,8 @@ def export_ebook_to_markdown():
     if os.path.exists("GroupDocs.Markdown.lic"):
         License.set_("GroupDocs.Markdown.lic")
 
-    # Step 2: Convert EPUB to a Markdown string in one call
-    markdown = MarkdownConverter.to_markdown("business-plan.epub")
-
-    # Step 3: Or save the conversion result directly to a file
-    MarkdownConverter.to_file("business-plan.epub", "export-ebook.md")
+    # Step 2: Convert the EPUB directly to a Markdown file
+    MarkdownConverter.to_file("business-plan.epub", "export-ebook-static.md")
 
 if __name__ == "__main__":
     export_ebook_to_markdown()
